@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app',
+  template: '<h1>Navigation</h1>'
+  // selector: 'app-root',
+  // templateUrl: './app.component.html',
+  // styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'freelancer-frontend';
+  title = 'Freelance Dashboard';
 }
