@@ -14,4 +14,3 @@ export class Proposal {
 
 // Sample Record:
 // 1, 'Abc Company', 'http://jeremyhastings.co.uk', 'Ruby on Rails', 150, 120, 15, 'jeremy.hastings@mac.com'
-
