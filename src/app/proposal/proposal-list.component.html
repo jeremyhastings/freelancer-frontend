@@ -1,10 +1,12 @@
 <h1>Proposal List</h1>
 
 <div *ngFor="let proposal of proposals">
-  <h3>{{ proposal.customer }}</h3>
-  <em>{{ proposal.portfolio_url }}</em>
-  <p>{{ proposal.tools }}</p>
-  <p>estimated hours: {{ proposal.estimated_hours }}, hourly rate: ${{ proposal.hourly_rate }},
-  and will take {{ proposal.weeks_to_complete }} weeks to complete.</p>
-  <p>contact me at: {{ proposal.client_email }}</p>
+  <a routerLink="/proposal/{{ proposal.id }}">
+    <h3>{{ proposal.customer }}</h3>
+    <em>{{ proposal.portfolio_url }}</em>
+    <p>{{ proposal.tools }}</p>
+    <p>estimated hours: {{ proposal.estimated_hours }}, hourly rate: ${{ proposal.hourly_rate }},
+      and will take {{ proposal.weeks_to_complete }} weeks to complete.</p>
+    <p>contact me at: {{ proposal.client_email }}</p>
+  </a>
 </div>
