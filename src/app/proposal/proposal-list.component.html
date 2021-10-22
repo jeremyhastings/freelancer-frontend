@@ -8,7 +8,7 @@
       <a class="list-group-item list-group-action" routerLink="/proposal/{{ proposal.id }}">
         <div class="d-flex-w-100 justify-content-between">
           <h5 class="mb-1">{{ proposal.customer }}</h5>
-          <small>${{ proposal.hourly_rate * proposal.estimated_hours }}</small>
+          <small>{{ proposal.hourly_rate * proposal.estimated_hours | currency:'USD':true:'.0' }}</small>
         </div>
       </a>
     </span>
