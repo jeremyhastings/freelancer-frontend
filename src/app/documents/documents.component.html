@@ -1,16 +1,24 @@
-<h1>{{ pageTitle }}</h1>
+<div class="container">
+  <h1>{{ pageTitle }}</h1>
 
-<div *ngFor="let document of documents">
-  <h3>{{ document.title }}</h3>
-  <em>{{ document.description }}</em>
-  <div>
-    <a href="{{ document.file_url }}">Download File</a>
+  <div class="card mb-3" *ngFor="let document of documents">
+    <img src="{{ document.image_url }}" class="card-img-top"  width="100%" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ document.title }}</h5>
+      <p class="card-text">{{ document.description }}</p>
+      <div>
+        <a class="btn btn-lg btn-primary" href="{{ document.file_url }}">Download File</a>
+      </div>
+      <p class="card-text"><small class="text-muted">{{ document.updated_at }}</small></p>
+    </div>
   </div>
-  <p>
-    {{ document.updated_at }}
-  </p>
-  <p>
-    {{ document.image_url }}
-  </p>
-  <hr>
 </div>
+
+<!--<div class="card mb-3">-->
+<!--  <img src="..." class="card-img-top" alt="...">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Card title</h5>-->
+<!--    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--  </div>-->
+<!--</div>-->
